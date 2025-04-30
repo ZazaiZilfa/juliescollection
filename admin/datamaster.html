@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Master - Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-base-200">
+  <div class="drawer lg:drawer-open">
+    <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+    
+    <div class="drawer-content flex flex-col">
+      <!-- Navbar -->
+      <div class="navbar bg-base-100 shadow-md lg:hidden">
+        <div class="flex-none">
+          <label for="drawer-toggle" class="btn btn-square btn-ghost">
+            <i class="fas fa-bars"></i>
+          </label>
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Admin Dashboard</a>
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img alt="User avatar" src="https://api.dicebear.com/6.x/initials/svg?seed=Admin" />
+              </div>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Profile</a></li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Page content -->
+      <div class="p-4 lg:p-6">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h1 class="text-2xl font-bold">Data Master</h1>
+            <div class="text-sm breadcrumbs">
+              <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li>Data Master</li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-center gap-2">
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                  <img alt="User avatar" src="https://api.dicebear.com/6.x/initials/svg?seed=Admin" />
+                </div>
+              </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Profile</a></li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+            <span class="font-medium">Admin User</span>
+          </div>
+        </div>
+        
+        <!-- Data Master Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <!-- Products Card -->
+          <a href="products.html" class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+            <div class="card-body">
+              <div class="flex items-center gap-4">
+                <div class="bg-primary/10 p-4 rounded-lg">
+                  <i class="fas fa-box text-3xl text-primary"></i>
+                </div>
+                <div>
+                  <h2 class="card-title">Products</h2>
+                  <p class="text-sm text-gray-500">Manage your store products</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-2xl font-bold">24</div>
+                <div class="badge badge-primary">View All</div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Categories Card -->
+          <a href="categories.html" class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+            <div class="card-body">
+              <div class="flex items-center gap-4">
+                <div class="bg-secondary/10 p-4 rounded-lg">
+                  <i class="fas fa-tags text-3xl text-secondary"></i>
+                </div>
+                <div>
+                  <h2 class="card-title">Categories</h2>
+                  <p class="text-sm text-gray-500">Organize your products</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-2xl font-bold">8</div>
+                <div class="badge badge-secondary">View All</div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Brands Card -->
+          <a href="brands.html" class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+            <div class="card-body">
+              <div class="flex items-center gap-4">
+                <div class="bg-accent/10 p-4 rounded-lg">
+                  <i class="fas fa-copyright text-3xl text-accent"></i>
+                </div>
+                <div>
+                  <h2 class="card-title">Brands</h2>
+                  <p class="text-sm text-gray-500">Manage product brands</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-2xl font-bold">12</div>
+                <div class="badge badge-accent">View All</div>
+              </div>
+            </div>
+          </a>
+          
+          <!-- Attributes Card -->
+          <a href="attributes.html" class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
+            <div class="card-body">
+              <div class="flex items-center gap-4">
+                <div class="bg-info/10 p-4 rounded-lg">
+                  <i class="fas fa-sliders-h text-3xl text-info"></i>
+                </div>
+                <div>
+                  <h2 class="card-title">Attributes</h2>
+                  <p class="text-sm text-gray-500">Product specifications</p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <div class="text-2xl font-bold">15</div>
+                <div class="badge badge-info">View All</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Recent Updates -->
+        <div class="bg-base-100 rounded-box shadow-md p-6 mb-8">
+          <h2 class="text-xl font-bold mb-4">Recent Updates</h2>
+          <div class="overflow-x-auto">
+            <table class="table table-zebra">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Name</th>
+                  <th>Action</th>
+                  <th>User</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="badge badge-primary">Product</div>
+                  </td>
+                  <td>Wireless Headphones</td>
+                  <td>Updated</td>
+                  <td>admin@example.com</td>
+                  <td>2 hours ago</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="badge badge-secondary">Category</div>
+                  </td>
+                  <td>Electronics</td>
+                  <td>Updated</td>
+                  <td>admin@example.com</td>
+                  <td>3 hours ago</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="badge badge-primary">Product</div>
+                  </td>
+                  <td>Bluetooth Speaker</td>
+                  <td>Added</td>
+                  <td>admin@example.com</td>
+                  <td>5 hours ago</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="badge badge-accent">Brand</div>
+                  </td>
+                  <td>Sony</td>
+                  <td>Added</td>
+                  <td>admin@example.com</td>
+                  <td>Yesterday</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="badge badge-primary">Product</div>
+                  </td>
+                  <td>Wireless Charger</td>
+                  <td>Deleted</td>
+                  <td>admin@example.com</td>
+                  <td>Yesterday</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="bg-base-100 rounded-box shadow-md p-6">
+          <h2 class="text-xl font-bold mb-4">Quick Actions</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <button class="btn btn-primary" onclick="document.getElementById('add-product-modal').showModal()">
+              <i class="fas fa-plus mr-2"></i> Add Product
+            </button>
+            <button class="btn btn-secondary" onclick="document.getElementById('add-category-modal').showModal()">
+              <i class="fas fa-plus mr-2"></i> Add Category
+            </button>
+            <button class="btn btn-accent" onclick="document.getElementById('add-brand-modal').showModal()">
+              <i class="fas fa-plus mr-2"></i> Add Brand
+            </button>
+            <button class="btn btn-info" onclick="document.getElementById('add-attribute-modal').showModal()">
+              <i class="fas fa-plus mr-2"></i> Add Attribute
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-download mr-2"></i> Export Products
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-upload mr-2"></i> Import Products
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-sync-alt mr-2"></i> Sync Inventory
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-chart-bar mr-2"></i> View Reports
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="drawer-side z-40">
+      <label for="drawer-toggle" aria-label="close sidebar" class="drawer-overlay"></label>
+      <aside class="bg-base-100 w-64 min-h-screen">
+        <div class="p-4 text-xl font-bold flex items-center gap-2">
+          <i class="fas fa-chart-line text-primary"></i>
+          <span>Admin Panel</span>
+        </div>
+        <ul class="menu p-4 text-base-content">
+          <li class="menu-title">Main</li>
+          <li><a href="index.html"><i class="fas fa-home mr-2"></i>Dashboard</a></li>
+          <li><a href="users.html"><i class="fas fa-users mr-2"></i>Users</a></li>
+          
+          <li class="menu-title mt-4">Data Master</li>
+          <li>
+            <details open>
+              <summary class="active"><i class="fas fa-database mr-2"></i>Data Master</summary>
+              <ul>
+                <li><a href="categories.html"><i class="fas fa-tags mr-2"></i>Categories</a></li>
+                <li><a href="products.html"><i class="fas fa-box mr-2"></i>Products</a></li>
+                <li><a href="attributes.html"><i class="fas fa-sliders-h mr-2"></i>Attributes</a></li>
+                <li><a href="brands.html"><i class="fas fa-copyright mr-2"></i>Brands</a></li>
+              </ul>
+            </details>
+          </li>
+          
+          <li class="menu-title mt-4">E-commerce</li>
+          <li><a href="orders.html"><i class="fas fa-shopping-cart mr-2"></i>Orders</a></li>
+          <li><a href="customers.html"><i class="fas fa-user-friends mr-2"></i>Customers</a></li>
+          <li><a href="coupons.html"><i class="fas fa-ticket-alt mr-2"></i>Coupons</a></li>
+          <li><a href="reviews.html"><i class="fas fa-star mr-2"></i>Reviews</a></li>
+          
+          <li class="menu-title mt-4">Settings</li>
+          <li><a href="profile.html"><i class="fas fa-user mr-2"></i>Profile</a></li>
+          <li><a href="settings.html"><i class="fas fa-cog mr-2"></i>Settings</a></li>
+          
+          <li class="mt-4"><a href="#" class="text-error"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  
+  <!-- Add Product Modal -->
+  <dialog id="add-product-modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg mb-4">Add New Product</h3>
+      <p class="mb-4">This will redirect you to the product creation page.</p>
+      <div class="modal-action">
+        <button class="btn" onclick="document.getElementById('add-product-modal').close()">Cancel</button>
+        <a href="products.html" class="btn btn-primary">Continue</a>
+      </div>
+    </div>
+  </dialog>
+  
+  <!-- Add Category Modal -->
+  <dialog id="add-category-modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg mb-4">Add New Category</h3>
+      <form>
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Category Name</span>
+            <span class="label-text-alt text-error">*Required</span>
+          </label>
+          <input type="text" placeholder="Enter category name" class="input input-bordered" required />
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Parent Category</span>
+          </label>
+          <select class="select select-bordered">
+            <option selected>None (Top Level)</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Home & Kitchen</option>
+            <option>Beauty</option>
+          </select>
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Description</span>
+          </label>
+          <textarea class="textarea textarea-bordered" placeholder="Enter category description"></textarea>
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Category Image</span>
+          </label>
+          <input type="file" class="file-input file-input-bordered w-full" />
+        </div>
+        
+        <div class="modal-action">
+          <button type="button" class="btn" onclick="document.getElementById('add-category-modal').close()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Category</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+  
+  <!-- Add Brand Modal -->
+  <dialog id="add-brand-modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg mb-4">Add New Brand</h3>
+      <form>
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Brand Name</span>
+            <span class="label-text-alt text-error">*Required</span>
+          </label>
+          <input type="text" placeholder="Enter brand name" class="input input-bordered" required />
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Description</span>
+          </label>
+          <textarea class="textarea textarea-bordered" placeholder="Enter brand description"></textarea>
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Brand Logo</span>
+          </label>
+          <input type="file" class="file-input file-input-bordered w-full" />
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Website URL</span>
+          </label>
+          <input type="url" placeholder="https://example.com" class="input input-bordered" />
+        </div>
+        
+        <div class="modal-action">
+          <button type="button" class="btn" onclick="document.getElementById('add-brand-modal').close()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Brand</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+  
+  <!-- Add Attribute Modal -->
+  <dialog id="add-attribute-modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg mb-4">Add New Attribute</h3>
+      <form>
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Attribute Name</span>
+            <span class="label-text-alt text-error">*Required</span>
+          </label>
+          <input type="text" placeholder="Enter attribute name (e.g. Color, Size)" class="input input-bordered" required />
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label">
+            <span class="label-text">Attribute Values</span>
+            <span class="label-text-alt text-error">*Required</span>
+          </label>
+          <textarea class="textarea textarea-bordered" placeholder="Enter values separated by commas (e.g. Red, Blue, Green)" required></textarea>
+          <label class="label">
+            <span class="label-text-alt">These values will be available for selection when creating products</span>
+          </label>
+        </div>
+        
+        <div class="form-control mb-4">
+          <label class="label cursor-pointer">
+            <span class="label-text">Used for Variations</span> 
+            <input type="checkbox" class="toggle toggle-primary" />
+          </label>
+          <label class="label">
+            <span class="label-text-alt">Enable this if the attribute will be used for product variations (e.g. different prices for different sizes)</span>
+          </label>
+        </div>
+        
+        <div class="modal-action">
+          <button type="button" class="btn" onclick="document.getElementById('add-attribute-modal').close()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Attribute</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>
