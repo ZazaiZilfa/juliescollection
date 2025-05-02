@@ -27,7 +27,7 @@
           <a href="login.php" class="border border-[#e6a4b4] text-[#e6a4b4] px-4 py-1 rounded-xl hover:bg-[#f9d8df] hidden md:block">
             Masuk
           </a>
-          <a class="bg-[#e6a4b4] text-white px-4 py-1 rounded-xl hover:bg-[#d18fa0] hidden md:block">
+          <a href="register.php" class="bg-[#e6a4b4] text-white px-4 py-1 rounded-xl hover:bg-[#d18fa0] hidden md:block">
             Daftar
           </a>
           <!-- Hamburger Menu Mobile -->
