@@ -36,7 +36,7 @@ CREATE TABLE `products` (
   `category_id` varchar(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `iswho` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE `user` (
   `password` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `user_level` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
